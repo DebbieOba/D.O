@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBADEE | Ecommerce Website Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/Contact.png" width="125" alt="OBADEE Logo">
+                    </a>
+                </div>
+                <nav aria-label="Main Navigation">
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#offer">About</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-actions">
+                    <button type="button" class="cart-btn" aria-label="Shopping Cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span id="cart-count" class="cart-badge">0</span>
+                    </button>
+                    <button type="button" class="menu-btn" id="menu-toggle-btn" onclick="menutoggle()" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <img src="./images/menu.png" class="menu-icon" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Elevate Your Style,<br>A Breeze Of Steeze</h1>
+                    <p>Style is a journey, not a destination. Your style is a reflection of your personality, so own it.<br>Believe in yourself and your unique style.</p>
+                    <a href="#products" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="./images/60f5f6403ce1123975955b8363c93731.jpg" alt="Model showcasing elevated streetwear fashion">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Categories-->
+    <div class="categories" id="categories">
+        <div class="small-container">
+            <h2 class="title">Shop by Category</h2>
+            <div class="row">
+                <div class="col-3">
+                    <div class="category-card">
+                        <img src="./images/0b29e84a69af1bcf7e0755f1103dd022.jpg" alt="Streetwear & Apparel" loading="lazy">
+                        <div class="category-label">Streetwear &amp; Apparel</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="category-card">
+                        <img src="./images/ff9097cf45481c46a6ea136f3c0fbf0e.jpg" alt="Bags & Accessories" loading="lazy">
+                        <div class="category-label">Bags &amp; Accessories</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="category-card">
+                        <img src="./images/c4110df3b80050a822515ee0142c0d62.jpg" alt="Footwear" loading="lazy">
+                        <div class="category-label">Footwear</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Products -->
+    <div class="small-container" id="products">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <div class="product-card">
+                    <img src="./images/ce60003da34fe84fc3927335402e3dcd.jpg" alt="Guess Black Shoulder Bag" loading="lazy">
+                    <h4>Guess Black Shoulder Bag</h4>
+                    <div class="rating" aria-label="Rated 4 out of 5 stars">
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-regular fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p class="price">&#8358; 7,500.00</p>
+                    <button type="button" class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="product-card">
+                    <img src="./images/8f15f7c0e91135c9bd01f6dd2ce5db11.jpg" alt="Nike Air Force 1" loading="lazy">
+                    <h4>Nike Air Force 1</h4>
+                    <div class="rating" aria-label="Rated 4 out of 5 stars">
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-regular fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p class="price">&#8358; 25,500.00</p>
+                    <button type="button" class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="product-card">
+                    <img src="./images/6cd4e538eca24a1ee3ff5babc68a9b5c.jpg" alt="Dark Blue Baggy Jeans" loading="lazy">
+                    <h4>Dark Blue Baggy Jeans</h4>
+                    <div class="rating" aria-label="Rated 4 out of 5 stars">
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-regular fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p class="price">&#8358; 10,000.00</p>
+                    <button type="button" class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="product-card">
+                    <img src="./images/1e74616f3468824eb894af7eaa9110ca.jpg" alt="Crop Top and Shorts Set" loading="lazy">
+                    <h4>Crop Top and Shorts Set</h4>
+                    <div class="rating" aria-label="Rated 4 out of 5 stars">
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-regular fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p class="price">&#8358; 9,000.00</p>
+                    <button type="button" class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offer-->
+    <div class="offer" id="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="./images/c4110df3b80050a822515ee0142c0d62.jpg" class="offer-img" alt="Exclusive Chunky Platform Loafers" loading="lazy">
+                </div>
+                <div class="col-2">
+                    <p>Exclusively Available on OBADEE</p>
+                    <h2>Chunky Platform Loafers</h2>
+                    <small>Step out in confidence with our signature patent-finish chunky loafers. Crafted with cushioned soles and timeless gold-tone hardware for all-day comfort and effortless steeze.</small>
+                    <br>
+                    <a href="#products" class="btn">Buy Now &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+
+            <!-- Payment + Shipping -->
+            <div class="footer-top">
+                <div class="payment">
+                    <p>Secure Payment Options</p>
+                    <img src="./images/visa.png" alt="Visa" loading="lazy">
+                    <img src="./images/paypal.png" alt="PayPal" loading="lazy">
+                    <img src="./images/mastercard.png" alt="Mastercard" loading="lazy">
+                    <img src="./images/apple-pay.png" alt="Apple Pay" loading="lazy">
+                </div>
+                <div class="shipping">
+                    <p>Trusted Delivery Partner</p>
+                    <img src="./images/dhl.png" alt="DHL Express" loading="lazy">
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Main Footer -->
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>HELP &amp; INFORMATION</h4>
+                    <ul>
+                        <li><a href="#footer">FAQ</a></li>
+                        <li><a href="#footer">Delivery &amp; Shipping</a></li>
+                        <li><a href="#footer">Returns &amp; Exchanges</a></li>
+                        <li><a href="#footer">Privacy Policy</a></li>
+                        <li><a href="#footer">Terms &amp; Conditions</a></li>
+                        <li><a href="#offer">About OBADEE</a></li>
+                        <li><a href="#footer">Site Map</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>SHOP</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#products">New Arrivals</a></li>
+                        <li><a href="#categories">Collections</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>MY ACCOUNT</h4>
+                    <ul>
+                        <li><a href="#footer">Sign In</a></li>
+                        <li><a href="#footer">My Orders</a></li>
+                        <li><a href="#footer">Wishlist</a></li>
+                        <li><a href="#footer">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>STAY CONNECTED</h4>
+                    <div class="social-icons">
+                        <a href="#footer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#footer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#footer" aria-label="Pinterest"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a>
+                        <a href="#footer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                    <h4 class="newsletter-heading">NEWSLETTER</h4>
+                    <p>Subscribe to get updates on new products, trends, and exclusive offers.</p>
+                    <form id="newsletter-form" onsubmit="handleSubscribe(event)">
+                        <input type="email" placeholder="Your Email Address" aria-label="Your Email Address" required>
+                        <button type="submit">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OBADEE. All Rights Reserved. Designed with ❤️ by OBADEE.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        const MenuItems = document.getElementById("MenuItems");
+        const menuToggleBtn = document.getElementById("menu-toggle-btn");
+        const cartCountEl = document.getElementById("cart-count");
+        let cartCount = 0;
+
+        function menutoggle() {
+            const isOpen = MenuItems.classList.toggle("show");
+            if (menuToggleBtn) {
+                menuToggleBtn.setAttribute("aria-expanded", String(isOpen));
+            }
+        }
+
+        function addToCart(button) {
+            cartCount++;
+            cartCountEl.textContent = cartCount;
+            const originalText = button.textContent;
+            button.textContent = "Added ✓";
+            button.classList.add("added");
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.classList.remove("added");
+            }, 1200);
+        }
+
+        function handleSubscribe(event) {
+            event.preventDefault();
+            const form = event.target;
+            const button = form.querySelector("button");
+            button.textContent = "SUBSCRIBED!";
+            form.reset();
+            setTimeout(() => {
+                button.textContent = "SUBSCRIBE";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
